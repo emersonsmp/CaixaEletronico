@@ -37,8 +37,8 @@ public class CashMachine {
         
         int Remainder = value;
         
-            hundredCedulles = value/100;
-                    
+        if(notas.getfiftyNotes()> 0){ 
+            hundredCedulles = value/100;        
             if(notas.gethundredNotes() >= hundredCedulles)
                 Remainder = Remainder%100;
                     
@@ -46,6 +46,7 @@ public class CashMachine {
                 hundredCedulles = notas.gethundredNotes();
                 Remainder = Remainder - (hundredCedulles * 100);
             }
+        }
                 
                 
                 if(notas.getfiftyNotes()> 0){      

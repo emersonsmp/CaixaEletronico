@@ -59,6 +59,14 @@ public class CashTest {
     }
     
     @Test
+    public void TestWithMoneyLimit_350() {
+        
+        CashMachine Machine = new CashMachine();
+        Cash cash = new Cash(0,0,1,10);
+        assertEquals("3 Nota(s) de 100;\n1 Nota(s) de 50;\n0 Nota(s) de 20;\n0 Nota(s) de 10;", Machine.Withdral(cash, 350));
+    }
+    
+    @Test
     public void TestWithMoneyLimit_500() {
         
         CashMachine Machine = new CashMachine();
@@ -75,6 +83,7 @@ public class CashTest {
         assertEquals("5 Nota(s) de 100;\n1 Nota(s) de 50;\n11 Nota(s) de 20;\n1 Nota(s) de 10;", Machine.Withdral(cash, 780));
     }
     
+    @Test
     public void TestWithMoneyLimit_30() {
         
         CashMachine Machine = new CashMachine();
